@@ -13,7 +13,8 @@ A Power Automate flow runs every day. It executes a Kusto query against Applicat
   - GetApplicationInsights : Cloud flow that runs once per day. It gathers Application Insight records from the previous 24 hours and writes them to the AppUsage table in Dataverse.
   - D365Usage : Power BI sample Report and Dataset 
 
-
+### Reporting
+Add AppUsage and AppMap to a Power BI Report. If you want user names, add the User (systemuser) table. If you have a lot of users in this table, you may decide to filter it to eliminate headless accounts or other accounts that are not important to your report. For example, I created my reports to identify unique interactive users (licensed humans). I did this by filtering on Azure AD Object ID <> null and Application ID = null. 
 
 
 
